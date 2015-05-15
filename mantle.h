@@ -1327,12 +1327,12 @@ typedef GR_RESULT GRAPI grCreateDepthStencilViewFn(GR_DEVICE device, const GR_DE
 // Shader and Pipeline Functions
 // NB: Shaders in Mantle are compiled from binary AMD IL to ISA for execution on the GPU.
 //     While there are tools like AMD ShaderAnalyzer which can compile your GLSL/HLSL
-//     to IL Text, I have yet to find a tools which can translate IL Text to an IL byte stream.
+//     to IL Text, I have yet to find a tool which can translate IL Text to an IL byte stream.
 //     Apparently some old versions of the AMD APP SDK feature an OpenCL compiler that can be
-//     used using an API (calcl.h) to compile IL Text to binary. The problem is that this compiler
+//     used via an API (calcl.h) to compile IL Text to binary. The problem is that this compiler
 //     apparently does not know how to assemble vertex, geometry, hull or domain shaders.
 //     That should give you an idea: http://devgurus.amd.com/message/1282103#1282103.
-//     So, I guess, in the end, you'd have to write your own assembler from scratch, since you do
+//     So, I guess, in the end you'd have to write your own assembler from scratch, since you do
 //     not have access to AMD's internal tool chain (that they give to DICE for example).
 //     An AMD Intermediate Language reference manual is readily available.
 typedef GR_RESULT GRAPI grCreateShaderFn(GR_DEVICE device, const GR_SHADER_CREATE_INFO* pCreateInfo, GR_SHADER* pShader);
