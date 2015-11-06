@@ -157,6 +157,16 @@ extern grStorePipelineFn*                                   grlStorePipeline;
 extern grUnmapMemoryFn*                                     grlUnmapMemory;
 extern grWaitForFencesFn*                                   grlWaitForFences;
 extern grWaitQueueSemaphoreFn*                              grlWaitQueueSemaphore;
+extern grWsiWinCreatePresentableImageFn*                    grlWsiWinCreatePresentableImage;
+extern grWsiWinGetDisplayModeListFn*                        grlWsiWinGetDisplayModeList;
+extern grWsiWinGetDisplaysFn*                               grlWsiWinGetDisplays;
+extern grWsiWinGetScanLineFn*                               grlWsiWinGetScanLine;
+extern grWsiWinQueuePresentFn*                              grlWsiWinQueuePresent;
+extern grWsiWinReleaseFullscreenOwnershipFn*                grlWsiWinReleaseFullscreenOwnership;
+extern grWsiWinSetGammaRampFn*                              grlWsiWinSetGammaRamp;
+extern grWsiWinSetMaxQueuedFramesFn*                        grlWsiWinSetMaxQueuedFrames;
+extern grWsiWinTakeFullscreenOwnershipFn*                   grlWsiWinTakeFullscreenOwnership;
+extern grWsiWinWaitForVerticalBlankFn*                      grlWsiWinWaitForVerticalBlank;
 
 #define grAllocMemory                                 grlAllocMemory
 #define grAttachImageViewDescriptors                  grlAttachImageViewDescriptors
@@ -270,6 +280,16 @@ extern grWaitQueueSemaphoreFn*                              grlWaitQueueSemaphor
 #define grUnmapMemory                                 grlUnmapMemory
 #define grWaitForFences                               grlWaitForFences
 #define grWaitQueueSemaphore                          grlWaitQueueSemaphore
+#define grWsiWinCreatePresentableImage                grlWsiWinCreatePresentableImage
+#define grWsiWinGetDisplayModeList                    grlWsiWinGetDisplayModeList
+#define grWsiWinGetDisplays                           grlWsiWinGetDisplays
+#define grWsiWinGetScanLine                           grlWsiWinGetScanLine
+#define grWsiWinQueuePresent                          grlWsiWinQueuePresent
+#define grWsiWinReleaseFullscreenOwnership            grlWsiWinReleaseFullscreenOwnership
+#define grWsiWinSetGammaRamp                          grlWsiWinSetGammaRamp
+#define grWsiWinSetMaxQueuedFrames                    grlWsiWinSetMaxQueuedFrames
+#define grWsiWinTakeFullscreenOwnership               grlWsiWinTakeFullscreenOwnership
+#define grWsiWinWaitForVerticalBlank                  grlWsiWinWaitForVerticalBlank
 
 #ifdef __cplusplus
 }

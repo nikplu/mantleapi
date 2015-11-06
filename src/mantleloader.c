@@ -182,6 +182,16 @@ grStorePipelineFn*                                   grlStorePipeline;
 grUnmapMemoryFn*                                     grlUnmapMemory;
 grWaitForFencesFn*                                   grlWaitForFences;
 grWaitQueueSemaphoreFn*                              grlWaitQueueSemaphore;
+grWsiWinCreatePresentableImageFn*                    grlWsiWinCreatePresentableImage;
+grWsiWinGetDisplayModeListFn*                        grlWsiWinGetDisplayModeList;
+grWsiWinGetDisplaysFn*                               grlWsiWinGetDisplays;
+grWsiWinGetScanLineFn*                               grlWsiWinGetScanLine;
+grWsiWinQueuePresentFn*                              grlWsiWinQueuePresent;
+grWsiWinReleaseFullscreenOwnershipFn*                grlWsiWinReleaseFullscreenOwnership;
+grWsiWinSetGammaRampFn*                              grlWsiWinSetGammaRamp;
+grWsiWinSetMaxQueuedFramesFn*                        grlWsiWinSetMaxQueuedFrames;
+grWsiWinTakeFullscreenOwnershipFn*                   grlWsiWinTakeFullscreenOwnership;
+grWsiWinWaitForVerticalBlankFn*                      grlWsiWinWaitForVerticalBlank;
 
 static void load_procs(void)
 {
@@ -297,4 +307,14 @@ static void load_procs(void)
 	grlUnmapMemory = (grUnmapMemoryFn*) get_proc("grUnmapMemory");
 	grlWaitForFences = (grWaitForFencesFn*) get_proc("grWaitForFences");
 	grlWaitQueueSemaphore = (grWaitQueueSemaphoreFn*) get_proc("grWaitQueueSemaphore");
+	grlWsiWinCreatePresentableImage = (grWsiWinCreatePresentableImageFn*) get_proc("grWsiWinCreatePresentableImage");
+	grlWsiWinGetDisplayModeList = (grWsiWinGetDisplayModeListFn*) get_proc("grWsiWinGetDisplayModeList");
+	grlWsiWinGetDisplays = (grWsiWinGetDisplaysFn*) get_proc("grWsiWinGetDisplays");
+	grlWsiWinGetScanLine = (grWsiWinGetScanLineFn*) get_proc("grWsiWinGetScanLine");
+	grlWsiWinQueuePresent = (grWsiWinQueuePresentFn*) get_proc("grWsiWinQueuePresent");
+	grlWsiWinReleaseFullscreenOwnership = (grWsiWinReleaseFullscreenOwnershipFn*) get_proc("grWsiWinReleaseFullscreenOwnership");
+	grlWsiWinSetGammaRamp = (grWsiWinSetGammaRampFn*) get_proc("grWsiWinSetGammaRamp");
+	grlWsiWinSetMaxQueuedFrames = (grWsiWinSetMaxQueuedFramesFn*) get_proc("grWsiWinSetMaxQueuedFrames");
+	grlWsiWinTakeFullscreenOwnership = (grWsiWinTakeFullscreenOwnershipFn*) get_proc("grWsiWinTakeFullscreenOwnership");
+	grlWsiWinWaitForVerticalBlank = (grWsiWinWaitForVerticalBlankFn*) get_proc("grWsiWinWaitForVerticalBlank");
 }
