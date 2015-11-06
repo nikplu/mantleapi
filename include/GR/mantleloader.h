@@ -69,6 +69,8 @@ extern grCmdCopyImageFn*                                    grlCmdCopyImage;
 extern grCmdCopyImageToMemoryFn*                            grlCmdCopyImageToMemory;
 extern grCmdCopyMemoryFn*                                   grlCmdCopyMemory;
 extern grCmdCopyMemoryToImageFn*                            grlCmdCopyMemoryToImage;
+extern grCmdDbgMarkerBeginFn*                               grlCmdDbgMarkerBegin;
+extern grCmdDbgMarkerEndFn*                                 grlCmdDbgMarkerEnd;
 extern grCmdDispatchFn*                                     grlCmdDispatch;
 extern grCmdDispatchIndirectFn*                             grlCmdDispatchIndirect;
 extern grCmdDrawFn*                                         grlCmdDraw;
@@ -109,6 +111,13 @@ extern grCreateRasterStateFn*                               grlCreateRasterState
 extern grCreateSamplerFn*                                   grlCreateSampler;
 extern grCreateShaderFn*                                    grlCreateShader;
 extern grCreateViewportStateFn*                             grlCreateViewportState;
+extern grDbgRegisterMsgCallbackFn*                          grlDbgRegisterMsgCallback;
+extern grDbgSetDeviceOptionFn*                              grlDbgSetDeviceOption;
+extern grDbgSetGlobalOptionFn*                              grlDbgSetGlobalOption;
+extern grDbgSetMessageFilterFn*                             grlDbgSetMessageFilter;
+extern grDbgSetObjectTagFn*                                 grlDbgSetObjectTag;
+extern grDbgSetValidationLevelFn*                           grlDbgSetValidationLevel;
+extern grDbgUnregisterMsgCallbackFn*                        grlDbgUnregisterMsgCallback;
 extern grDestroyDeviceFn*                                   grlDestroyDevice;
 extern grDestroyObjectFn*                                   grlDestroyObject;
 extern grDeviceWaitIdleFn*                                  grlDeviceWaitIdle;
@@ -173,6 +182,8 @@ extern grWaitQueueSemaphoreFn*                              grlWaitQueueSemaphor
 #define grCmdCopyImageToMemory                        grlCmdCopyImageToMemory
 #define grCmdCopyMemory                               grlCmdCopyMemory
 #define grCmdCopyMemoryToImage                        grlCmdCopyMemoryToImage
+#define grCmdDbgMarkerBegin                           grlCmdDbgMarkerBegin
+#define grCmdDbgMarkerEnd                             grlCmdDbgMarkerEnd
 #define grCmdDispatch                                 grlCmdDispatch
 #define grCmdDispatchIndirect                         grlCmdDispatchIndirect
 #define grCmdDraw                                     grlCmdDraw
@@ -213,6 +224,13 @@ extern grWaitQueueSemaphoreFn*                              grlWaitQueueSemaphor
 #define grCreateSampler                               grlCreateSampler
 #define grCreateShader                                grlCreateShader
 #define grCreateViewportState                         grlCreateViewportState
+#define grDbgRegisterMsgCallback                      grlDbgRegisterMsgCallback
+#define grDbgSetDeviceOption                          grlDbgSetDeviceOption
+#define grDbgSetGlobalOption                          grlDbgSetGlobalOption
+#define grDbgSetMessageFilter                         grlDbgSetMessageFilter
+#define grDbgSetObjectTag                             grlDbgSetObjectTag
+#define grDbgSetValidationLevel                       grlDbgSetValidationLevel
+#define grDbgUnregisterMsgCallback                    grlDbgUnregisterMsgCallback
 #define grDestroyDevice                               grlDestroyDevice
 #define grDestroyObject                               grlDestroyObject
 #define grDeviceWaitIdle                              grlDeviceWaitIdle
