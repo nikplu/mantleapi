@@ -580,19 +580,19 @@ typedef enum _GR_RESULT
 
 //* Data types
 typedef char GR_CHAR;
-typedef int GR_INT;
-typedef unsigned int GR_UINT;
+typedef int32_t GR_INT;
+typedef uint32_t GR_UINT;
 typedef uint8_t GR_UINT8;
 typedef uint32_t GR_UINT32;
 typedef uint64_t GR_UINT64;
 typedef int32_t GR_INT32;
 typedef size_t GR_SIZE;
-typedef uint32_t GR_ENUM;
+typedef int32_t GR_ENUM;
 typedef void GR_VOID;
 typedef float GR_FLOAT;
-typedef int GR_BOOL;
-typedef size_t GR_GPU_SIZE; // guessed
-typedef unsigned int GR_FLAGS; // guessed
+typedef uint32_t GR_BOOL;
+typedef uint64_t GR_GPU_SIZE; // guessed
+typedef int32_t GR_FLAGS; // guessed
 typedef uint32_t GR_SAMPLE_MASK; // guessed
 
 // FIXME: unsure...
