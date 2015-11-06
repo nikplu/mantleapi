@@ -10,7 +10,7 @@
 #ifndef _mantle_h_
 #define _mantle_h_
 
-#include <cstdint>
+#include <stdint.h>
 
 //* Defines
 #define GR_STDCALL __stdcall
@@ -630,13 +630,15 @@ typedef GR_HANDLE GR_PIPELINE;
 typedef GR_HANDLE GR_QUERY_POOL;
 typedef GR_HANDLE GR_EVENT;
 
-static const GR_UINT GR_MAX_PHYSICAL_GPUS = 4;
-static const GR_UINT32 GR_API_VERSION = 1; // guessed
-static const GR_UINT GR_MAX_MEMORY_HEAPS = 8;
-static const GR_UINT GR_MAX_VIEWPORTS = 16;
-static const GR_UINT GR_MAX_COLOR_TARGETS = 16;
-static const GR_UINT GR_MAX_PHYSICAL_GPU_NAME = 255;
-static const GR_UINT GR_MAX_DESCRIPTOR_SETS = 16; // FIXME: guessed and probably wrong, I'd have to reverse engineer that
+#define GR_MAX_PHYSICAL_GPUS 4
+// guessed
+#define GR_API_VERSION 1
+#define GR_MAX_MEMORY_HEAPS 8
+#define GR_MAX_VIEWPORTS 16
+#define GR_MAX_COLOR_TARGETS 16
+#define GR_MAX_PHYSICAL_GPU_NAME 255
+// FIXME: guessed and probably wrong, I'd have to reverse engineer that
+#define GR_MAX_DESCRIPTOR_SETS 16
 
 //* Callbacks
 typedef GR_VOID* (GR_STDCALL *GR_ALLOC_FUNCTION)(
@@ -1284,8 +1286,8 @@ typedef struct _GR_VIRTUAL_MEMORY_REMAP_RANGE
 // Initialization and Device Functions
 typedef GR_RESULT GRAPI grInitAndEnumerateGpusFn(const GR_APPLICATION_INFO* pAppInfo, const GR_ALLOC_CALLBACKS* pAllocCb, GR_UINT* pGpuCount, GR_PHYSICAL_GPU gpus[GR_MAX_PHYSICAL_GPUS]);
 typedef GR_RESULT GRAPI grGetGpuInfoFn(GR_PHYSICAL_GPU gpu, GR_ENUM infoType, GR_SIZE* pDataSize, GR_VOID* pData);
-typedef GR_RESULT GRAPI grCreateDevice(GR_PHYSICAL_GPU gpu, const GR_DEVICE_CREATE_INFO* pCreateInfo, GR_DEVICE* pDevice);
-typedef GR_RESULT GRAPI grDestroyDevice(GR_DEVICE device);
+typedef GR_RESULT GRAPI grCreateDeviceFn(GR_PHYSICAL_GPU gpu, const GR_DEVICE_CREATE_INFO* pCreateInfo, GR_DEVICE* pDevice);
+typedef GR_RESULT GRAPI grDestroyDeviceFn(GR_DEVICE device);
 
 // Extension Discovery Functions
 typedef GR_RESULT GRAPI grGetExtensionSupportFn(GR_PHYSICAL_GPU gpu, const GR_CHAR* pExtName);

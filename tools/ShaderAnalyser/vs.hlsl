@@ -10,7 +10,7 @@ VOut VShader(uint id : SV_VertexID) {
     VOut output;
 
     output.position = positions.Load(id);
-    output.color = colors.Load(id);
+    output.color = colors.Load(id) * float4(0.5, 0.5, 0.5, 1);
 
     return output;
 }
